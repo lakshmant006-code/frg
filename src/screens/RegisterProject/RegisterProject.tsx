@@ -46,6 +46,7 @@ interface ProjectActivity {
   endDate: Date | null;
   status: string;
   resources: Resource[];
+  projActId?: number;
 }
 
 interface ProjectFormData {
@@ -296,7 +297,7 @@ export const RegisterProject = (): JSX.Element => {
       endDate: activityEndDate,
       status: activityStatus,
       resources: resources,
-      projActId: nextProjActId // Add this line
+      projActId: nextProjActId
     };
 
     if (editingActivityIndex !== null) {
