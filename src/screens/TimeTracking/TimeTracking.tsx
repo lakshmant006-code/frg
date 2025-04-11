@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Sidebar } from "../../components/Sidebar";
 import { Header } from "../../components/Header/Header";
@@ -140,7 +140,7 @@ export const TimeTracking = (): JSX.Element => {
       }
 
       // Get employee details using email
-      let { data: empData, error: empError } = await supabase
+      let { data: empData } = await supabase
         .from('Employees')
         .select(`
           Emp_id,
